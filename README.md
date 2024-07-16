@@ -1,5 +1,6 @@
 ##### HalloweenFantasy
 
+  ```
   #난이도
   def selectDifficulty():
       global gamePad
@@ -16,6 +17,7 @@
                       return '노말'
                   elif event.key == pygame.K_h:  # 하드 모드 선택
                       return '하드'
+    
 
 =========================================================================================================================
 
@@ -23,12 +25,12 @@
   def startMessage(text):
       global gamePad
       textfont = pygame.font.Font('neodgm.ttf', 35)                  # 폰트는 35px
-      text = textfont.render(text, True, (255,255,255))                     # 게임 오버 시 나오는 텍스트 출력. 색은 흰색
+      text = textfont.render(text, True, (255,255,255))              # 게임 오버 시 나오는 텍스트 출력. 색은 흰색
       textpos = text.get_rect()
       textpos.center = (padWidth/2, 500)
-      gamePad.blit(text, textpos)                                         # text와 textpos 변수 화면에 출력
-      pygame.display.update()                                             # 그 후에 화면을 한번 업데이트 한다.
-      pygame.mixer.music.stop()                                           # 배경음악 정지           
+      gamePad.blit(text, textpos)                                    # text와 textpos 변수 화면에 출력
+      pygame.display.update()                                        # 그 후에 화면을 한번 업데이트 한다.
+      pygame.mixer.music.stop()                                      # 배경음악 정지           
 
 
 
